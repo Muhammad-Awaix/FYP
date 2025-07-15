@@ -35,7 +35,7 @@ The **AI Book Recommendation System** is an intelligent web application that lev
 <div align="center">
 
 ### 🏠 Landing Page
-![Landing Page](https://via.placeholder.com/800x400/6366f1/ffffff?text=Landing+Page+Demo)
+![Landing Page](Home.png)
 
 ### 🔍 Recommendation Interface
 ![Recommendation Interface](https://via.placeholder.com/800x400/8b5cf6/ffffff?text=AI+Recommendation+Interface)
