@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}AI Book Recommendation System{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="text-center mb-5">
+  <h1 class="section-title">
+    <i class="fas fa-magic me-3"></i>
+    Discover Your Next Favorite Book
+  </h1>
+  <p class="section-subtitle">
+    Powered by AI technology to find books that match your interests and mood
+  </p>
+  <a href="/recommend" class="btn btn-primary btn-lg">
+    <i class="fas fa-search me-2"></i>
+    Get AI Recommendations
+  </a>
+</section>
+
+<!-- Featured Books -->
+<section class="mb-5">
+  <h2 class="section-title">
+    <i class="fas fa-fire me-3"></i>
+    Top 50 Books
+  </h2>
+  
+  <div class="row">
+    {% for book in results %}
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card book-card">
+        <img src="{{ book.image }}" class="card-img-top book-image" alt="{{ book.title }}"
+             onerror="this.src='https://via.placeholder.com/300x400/6c757d/ffffff?text=No+Cover'">
+        <div class="card-body d-flex flex-column">
+          <span class="badge bg-primary mb-2">{{ book.category }}</span>
+          <h5 class="card-title book-title">{{ book.title }}</h5>
+          <p class="card-text book-author">
+            <i class="fas fa-user me-1"></i>
+            {{ book.authors }}
+          </p>
+          <p class="card-text book-description flex-grow-1">
+            {{ book.desc }}
+          </p>
+          <div class="mt-auto">
+            <div class="mb-2">
+              {% for i in range(5) %}
+                {% if i < book.rating|int %}
+                  <i class="fas fa-star text-warning"></i>
+                {% elif book.rating - book.rating|int >= 0.5 %}
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                {% else %}
+                  <i class="far fa-star text-muted"></i>
+                {% endif %}
+              {% endfor %}
+              <span class="ms-2">{{ book.rating }}/5</span>
+            </div>
+            <small class="reviews-count">
+              <i class="fas fa-comments me-1"></i>
+              {{ book.reviews }} reviews
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Features -->
+<section class="mb-5">
+  <h2 class="section-title">
+    <i class="fas fa-cogs me-3"></i>
+    Why Choose Our AI System?
+  </h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+          <h4>Advanced AI</h4>
+          <p class="text-muted">Machine learning algorithms understand your reading preferences</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fas fa-filter fa-3x text-secondary mb-3"></i>
+          <h4>Smart Filtering</h4>
+          <p class="text-muted">Filter by genre, mood, and emotional tone</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fas fa-bolt fa-3x text-warning mb-3"></i>
+          <h4>Instant Results</h4>
+          <p class="text-muted">Get personalized recommendations in seconds</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} 

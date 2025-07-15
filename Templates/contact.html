@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - AI Book Recommendation System{% endblock %}
+
+{% block content %}
+<!-- Contact Header -->
+<section class="text-center mb-5">
+  <h1 class="section-title">
+    <i class="fas fa-envelope me-3"></i>
+    Get In Touch
+  </h1>
+  <p class="section-subtitle">
+    Have questions or suggestions? We'd love to hear from you!
+  </p>
+</section>
+
+<!-- Contact Information -->
+<section class="mb-5">
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <i class="fas fa-user-graduate fa-3x text-primary mb-3"></i>
+          <h4>Student Information</h4>
+          <p class="text-muted mb-3">
+            <strong>Name:</strong> Muhammad Awais<br>
+            <strong>Roll No:</strong> BSSE-E21-78<br>
+            <strong>University:</strong> University of Sahiwal<br>
+            <strong>Department:</strong> Software Engineering
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Muhammad-Awaix" target="_blank" class="btn btn-outline-primary me-2">
+              <i class="fab fa-github me-1"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/muhamad-awais/" target="_blank" class="btn btn-outline-primary">
+              <i class="fab fa-linkedin me-1"></i>LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <i class="fas fa-project-diagram fa-3x text-secondary mb-3"></i>
+          <h4>Project Details</h4>
+          <p class="text-muted mb-3">
+            <strong>Project:</strong> AI Book Recommendation System<br>
+            <strong>Technology:</strong> Python, Flask, AI/ML<br>
+            <strong>Features:</strong> Semantic Search, Emotion Analysis<br>
+            <strong>Year:</strong> 2025
+          </p>
+          <a href="/recommend" class="btn btn-primary">
+            <i class="fas fa-search me-1"></i>Try Our AI System
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section class="mb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center mb-4">
+            <i class="fas fa-comments me-2"></i>
+            Send us a Message
+          </h3>
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="What's this about?">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Tell us more..."></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i>
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Info -->
+<section class="text-center">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fas fa-clock fa-2x text-warning mb-3"></i>
+          <h5>Response Time</h5>
+          <p class="text-muted">We typically respond within 24 hours</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fas fa-shield-alt fa-2x text-success mb-3"></i>
+          <h5>Privacy First</h5>
+          <p class="text-muted">Your information is safe with us</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <i class="fas fa-heart fa-2x text-danger mb-3"></i>
+          <h5>We Care</h5>
+          <p class="text-muted">Your feedback helps us improve</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} 
